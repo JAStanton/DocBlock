@@ -11,15 +11,15 @@ module.exports =
   editorSubscription: null
   docBlockrView: null
   loaded: false
-  languagesSupported: ['js', 'coffee']
   snippetsByPrefix: {}
+  languageFileRegex: /language-\w+.cson/
 
   activate: (state) ->
     atom.project.registerOpener (uri) =>
       if uri is 'atom://.atom/snippets'
         atom.workspaceView.open(@getUserSnippetsPath())
 
-    @loadAllLanguages()
+    @findAndLoadAllLanguages()
 
     @editorSubscription = atom.workspaceView.eachEditorView (editor) =>
       if editor.attached and not editor.mini
@@ -33,11 +33,22 @@ module.exports =
     userSnippetsPath = CSON.resolve(path.join(atom.getConfigDirPath(), 'snippets'))
     userSnippetsPath ? path.join(atom.getConfigDirPath(), 'snippets.cson')
 
-  loadAllLanguages: ->
+  findAndLoadAllLanguages: ->
     pkg = atom.packages.getLoadedPackage("doc-blockr")
-    snippetsDirPaths = []
-    for lang in @languagesSupported
-      snippetsDirPaths.push(CSON.resolve(path.join(pkg.path, 'snippets/language-' + lang + '.cson')))
+
+    files = fs.listSync((path.join(pkg.path, 'snippets')))
+    @loadAllLanguages @filterLanguageFiles files
+
+  filterLanguageFiles: (files) ->
+    filtered = []
+    for path in files
+      file = new File(path)
+      if @languageFileRegex.test(file.getBaseName()) then filtered.push(path)
+
+    (file for file in filtered when CSON.resolve(file))
+
+  loadAllLanguages: (snippetsDirPaths) ->
+    console.log("loading snippets", snippetsDirPaths)
     async.eachSeries snippetsDirPaths, @loadSnippetFiles.bind(this), @doneLoading.bind(this)
 
   loadSnippetFiles: (filePath, onComplete) ->
@@ -57,7 +68,6 @@ module.exports =
         lang = new File(filePath).getBaseName().split(".")[0].replace('language-', '')
         @snippetsByPrefix[lang] = [] unless @snippetsByPrefix[lang]
         @snippetsByPrefix[lang].push attributes.prefix
-
     onComplete()
 
   doneLoading: ->

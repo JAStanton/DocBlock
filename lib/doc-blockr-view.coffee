@@ -10,7 +10,6 @@ class DocBlockrView extends AutocompleteView
   initialize: (@editor, @snippets) ->
     atom.packages.on "doc-blockr:loaded", => @onComplete()
     atom.workspaceView.command "doc-blockr:toggle", => @toggle()
-
     super(@editor)
 
   onComplete: ->
