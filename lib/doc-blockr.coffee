@@ -10,7 +10,6 @@ module.exports =
   autocompleteViews: []
   editorSubscription: null
   docBlockrView: null
-  loaded: false
   snippetsByPrefix: {}
   languageFileRegex: /language-\w+.cson/
 
@@ -71,7 +70,6 @@ module.exports =
 
   doneLoading: ->
     atom.packages.emit 'doc-blockr:loaded'
-    @loaded = true
 
   deactivate: ->
     @editorSubscription?.off()

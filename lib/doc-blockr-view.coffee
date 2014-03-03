@@ -1,4 +1,5 @@
 {View} = require 'atom'
+helpers = require './helper'
 
 AutocompleteView = require './autocomplete-view'
 
@@ -32,6 +33,10 @@ class DocBlockrView extends AutocompleteView
 
   buildWordList: ->
     @wordList = @snippets[@getLanguage()]
+
+  confirmed: ->
+    super
+    helpers.keydown('\t')
 
   toggle: ->
     return unless @editorView.isVisible()
