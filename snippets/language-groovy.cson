@@ -1,0 +1,58 @@
+'source.groovy comment.block.documentation':
+  '@author':
+    'snippet': '@author'
+    'body': '@author ${1:[author]}'
+  '@deprecated':
+    'snippet': '@deprecated'
+    'body': '@deprecated ${1:[deprecated-text]}'
+  '@exception':
+    'snippet': '@exception'
+    'body': '@exception ${1:[class-name]} ${2:[description]}'
+  '@param':
+    'snippet': '@param'
+    'body': '@param ${1:[parameter-name]} ${2:[description]}'
+  '@return':
+    'snippet': '@return'
+    'body': '@return ${1:[description]}'
+  '@see':
+    'snippet': '@see'
+    'body': '@see ${1:[reference]}'
+  '@serial':
+    'snippet': '@serial'
+    'body': '@serial ${1:[description | include | exclude]}'
+  '@serialField':
+    'snippet': '@serialField'
+    'body': '@serialField ${1:[field-name]} ${2:[field-type]} ${3:[field-description]}'
+  '@serialDate':
+    'snippet': '@serialDate'
+    'body': '@serialDate ${1:[data-description]}'
+  '@since':
+    'snippet': '@since'
+    'body': '@since ${1:[since-text]}'
+  '@throws':
+    'snippet': '@throws'
+    'body': '@throws ${1:[class-name]} ${2:[description]}'
+  '@version':
+    'snippet': '@version'
+    'body': '@version ${1:[version-text]}'
+  '{@code}':
+    'snippet': '{@code}'
+    'body': '{@code ${1:[text]}}'
+  '{@docRoot}':
+    'snippet': '{@docRoot}'
+    'body': '{@docRoot}'
+  '{@inheritDoc}':
+    'snippet': '{@inheritDoc}'
+    'body': '{@inheritDoc}'
+  '{@link}':
+    'snippet': '{@link}'
+    'body': '{@link ${1:[package.class#member]} ${2:[label]}}'
+  '{@linkplain}':
+    'snippet': '{@linkplain}'
+    'body': '{@linkplain ${1:[package.class#member]} ${2:[label]}}'
+  '{@literal}':
+    'snippet': '{@literal}'
+    'body': '{@literal ${1:[text]}}'
+  '{@value}':
+    'snippet': '{@value}'
+    'body': '{@value ${1:[package.class#field]}}'

@@ -1,0 +1,37 @@
+'.source.actionscript .comment.block':
+  '@copy':
+    'prefix': '@copy'
+    'body': '@copy ${1:[reference]}'
+  '@default':
+    'prefix': '@default'
+    'body': '@default ${1:[value]}'
+  '@eventType':
+    'prefix': '@eventType'
+    'body': '@eventType ${1:[package.class.CONSTANT]}'
+  '@example':
+    'prefix': '@example'
+    'body': '@example ${1:[exampleText]}'
+  '@exampleText':
+    'prefix': '@exampleText'
+    'body': '@exampleText ${1:[string]}'
+  '@inheritDoc':
+    'prefix': '@inheritDoc'
+    'body': '@inheritDoc'
+  '@internal':
+    'prefix': '@internal'
+    'body': '@internal ${1:[text]}'
+  '@param':
+    'prefix': '@param'
+    'body': '@param ${1:[paramName]} ${2:[description]}'
+  '@private':
+    'prefix': '@private'
+    'body': '@private'
+  '@return':
+    'prefix': '@return'
+    'body': '@return ${1:[description]}'
+  '@see':
+    'prefix': '@see'
+    'body': '@see ${1:[reference]} ${2:[displayText]}'
+  '@throws':
+    'prefix': '@throws'
+    'body': '@throws ${1:[package.class.className]} ${2:[description]}'

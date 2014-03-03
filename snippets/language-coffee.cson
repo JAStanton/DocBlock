@@ -1,4 +1,4 @@
-'.source.coffee .comment.block.coffee':
+'.source.coffee .comment.block':
   '@async':
     'prefix': '@async'
     'body': '@async'
