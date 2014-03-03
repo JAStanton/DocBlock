@@ -1,7 +1,10 @@
-'.source.js .comment.block.documentation':
+'.source.coffee .comment.block.coffee':
   '@async':
     'prefix': '@async'
     'body': '@async'
+  '@augments':
+    'prefix': '@augments'
+    'body': '@augments {${1:[type]}}'
   '@augments':
     'prefix': '@augments'
     'body': '@augments {${1:[type]}}'
@@ -70,16 +73,16 @@
     'body': '@extension ${1:[class]}'
   '@extensionfor':
     'prefix': '@extensionfor'
-    'body': '${1:[class]}'
+    'body': '@extensionfor ${1:[class]}'
   '@extension_for':
     'prefix': '@extension_for'
-    'body': '${1:[class]}'
+    'body': '@extension_for ${1:[class]}'
   '@field':
     'prefix': '@field'
     'body': '@field'
   '@fileOverview':
     'prefix': '@fileOverview'
-    'body': '${1:[description]}'
+    'body': '@fileOverview ${1:[description]}'
   '@final':
     'prefix': '@final'
     'body': '@final'
@@ -133,7 +136,7 @@
     'body': '@namespace ${1:[description]}'
   '@nosideeffects':
     'prefix': '@nosideeffects'
-    'body': ''
+    'body': '@nosideeffects'
   '@optional':
     'prefix': '@optional'
     'body': '@optional'

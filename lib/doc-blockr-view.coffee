@@ -22,7 +22,7 @@ class DocBlockrView extends AutocompleteView
     inBlock = false
     i = 0
     while i < scopes.length
-      inBlock = true if scopes[i].indexOf("comment.block.documentation.js") != -1
+      inBlock = true if scopes[i].indexOf("comment.block") != -1
       i++
     inBlock
 

@@ -11,7 +11,7 @@ module.exports =
   editorSubscription: null
   docBlockrView: null
   loaded: false
-  languagesSupported: ['js']
+  languagesSupported: ['js', 'coffee']
   snippetsByPrefix: {}
 
   activate: (state) ->
