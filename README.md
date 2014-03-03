@@ -1,3 +1,5 @@
-# doc-blockr package
+=======
+DocBlock
+========
 
-A short description of your package.
+DocBlock for Atom
