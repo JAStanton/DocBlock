@@ -1,58 +1,58 @@
 'source.java comment.block.documentation':
   '@author':
-    'snippet': '@author'
+    'prefix': '@author'
     'body': '@author ${1:[author]}'
   '@deprecated':
-    'snippet': '@deprecated'
+    'prefix': '@deprecated'
     'body': '@deprecated ${1:[deprecated-text]}'
   '@exception':
-    'snippet': '@exception'
+    'prefix': '@exception'
     'body': '@exception ${1:[class-name]} ${2:[description]}'
   '@param':
-    'snippet': '@param'
+    'prefix': '@param'
     'body': '@param ${1:[parameter-name]} ${2:[description]}'
   '@return':
-    'snippet': '@return'
+    'prefix': '@return'
     'body': '@return ${1:[description]}'
   '@see':
-    'snippet': '@see'
+    'prefix': '@see'
     'body': '@see ${1:[reference]}'
   '@serial':
-    'snippet': '@serial'
+    'prefix': '@serial'
     'body': '@serial ${1:[description | include | exclude]}'
   '@serialField':
-    'snippet': '@serialField'
+    'prefix': '@serialField'
     'body': '@serialField ${1:[field-name]} ${2:[field-type]} ${3:[field-description]}'
   '@serialDate':
-    'snippet': '@serialDate'
+    'prefix': '@serialDate'
     'body': '@serialDate ${1:[data-description]}'
   '@since':
-    'snippet': '@since'
+    'prefix': '@since'
     'body': '@since ${1:[since-text]}'
   '@throws':
-    'snippet': '@throws'
+    'prefix': '@throws'
     'body': '@throws ${1:[class-name]} ${2:[description]}'
   '@version':
-    'snippet': '@version'
+    'prefix': '@version'
     'body': '@version ${1:[version-text]}'
   '{@code}':
-    'snippet': '{@code}'
+    'prefix': '{@code}'
     'body': '{@code ${1:[text]}}'
   '{@docRoot}':
-    'snippet': '{@docRoot}'
+    'prefix': '{@docRoot}'
     'body': '{@docRoot}'
   '{@inheritDoc}':
-    'snippet': '{@inheritDoc}'
+    'prefix': '{@inheritDoc}'
     'body': '{@inheritDoc}'
   '{@link}':
-    'snippet': '{@link}'
+    'prefix': '{@link}'
     'body': '{@link ${1:[package.class#member]} ${2:[label]}}'
   '{@linkplain}':
-    'snippet': '{@linkplain}'
+    'prefix': '{@linkplain}'
     'body': '{@linkplain ${1:[package.class#member]} ${2:[label]}}'
   '{@literal}':
-    'snippet': '{@literal}'
+    'prefix': '{@literal}'
     'body': '{@literal ${1:[text]}}'
   '{@value}':
-    'snippet': '{@value}'
+    'prefix': '{@value}'
     'body': '{@value ${1:[package.class#field]}}'
