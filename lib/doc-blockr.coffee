@@ -48,7 +48,6 @@ module.exports =
     (file for file in filtered when CSON.resolve(file))
 
   loadAllLanguages: (snippetsDirPaths) ->
-    console.log("loading snippets", snippetsDirPaths)
     async.eachSeries snippetsDirPaths, @loadSnippetFiles.bind(this), @doneLoading.bind(this)
 
   loadSnippetFiles: (filePath, onComplete) ->
