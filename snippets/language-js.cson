@@ -1,0 +1,151 @@
+'.source.js .comment.block.documentation':
+  'augments':
+    'prefix': '@augments'
+    'body': '@augments {${1:[type]}}'
+  'test':
+    'prefix': '@test'
+    'body': '@test {${1:[type]}}'
+  'attribute':
+    'prefix': '@attribute'
+    'body': '@attribute ${1:[name]}'
+  'author':
+    'prefix': '@author'
+    'body': '@author ${1:[author]}'
+  'borrows':
+    'prefix': '@borrows'
+    'body': '@borrows ${1:[otherMemberName]} as ${2:[thisMemberName]}'
+  'bubbles':
+    'prefix': '@bubbles'
+    'body': '@bubbles ${1:[name]}'
+  'class':
+    'prefix': '@class'
+    'body': '@class ${1:[description]}'
+  'copyright':
+    'prefix': '@copyright'
+    'body': '@copyright ${1:[description]}'
+  'default':
+    'prefix': '@default'
+    'body': '@default ${1:[value]}'
+  'define':
+    'prefix': '@define'
+    'body': '@define {${1:[type]}} ${2:[description]}'
+  'deprecated':
+    'prefix': '@deprecated'
+    'body': '@deprecated ${1:[description]}'
+  'description':
+    'prefix': '@description'
+    'body': '@description ${1:[description]}'
+  'enum':
+    'prefix': '@enum'
+    'body': '@enum {${1:[type]}}'
+  'example':
+    'prefix': '@example'
+    'body': '@example\n* '
+  'extends':
+    'prefix': '@extends'
+    'body': '@extends {${1:[type]}}'
+  'extension':
+    'prefix': '@extension'
+    'body': '@extension ${1:[class]}'
+  'extensionfor':
+    'prefix': '@extensionfor'
+    'body': '@extensionfor ${1:[class]}'
+  'extension_for':
+    'prefix': '@extension_for'
+    'body': '@extension_for ${1:[class]}'
+  'fileOverview':
+    'prefix': '@fileOverview'
+    'body': '@fileOverview ${1:[description]}'
+  'for':
+    'prefix': '@for'
+    'body': '@for ${1:[class]}'
+  'implements':
+    'prefix': '@implements'
+    'body': '@implements {${1:[type]}}'
+  'internal':
+    'prefix': '@internal'
+    'body': '@internal ${1:[private description]}'
+  'lends':
+    'prefix': '@lends'
+    'body': '@lends ${1:[symbolAlias]}'
+  'license':
+    'prefix': '@license'
+    'body': '@license ${1:[url]} ${2:[description]}'
+  'main':
+    'prefix': '@main'
+    'body': '@main ${1:[module name]}'
+  'memberOf':
+    'prefix': '@memberOf'
+    'body': '@memberOf ${1:[parentNamePath]}'
+  'method':
+    'prefix': '@method'
+    'body': '@method ${1:[name]}'
+  'module':
+    'prefix': '@module'
+    'body': '@module ${1:[module name]}'
+  'name':
+    'prefix': '@name'
+    'body': '@name {$1:[name]}'
+  'namespace':
+    'prefix': '@namespace'
+    'body': '@namespace ${1:[description]}'
+  'override':
+    'prefix': '@override'
+    'body': '@override'
+  'package':
+    'prefix': '@package'
+    'body': '@package ${1:[name]}'
+  'param':
+    'prefix': '@param'
+    'body': '@param {${1:[type]}} ${2:[varname]} ${3:[description]}'
+  'property':
+    'prefix': '@property'
+    'body': '@property {${1:[type]}} ${2:[propName]} ${3:[description]}'
+  'requires':
+    'prefix': '@requires'
+    'body': '@requires ${1:[description]}'
+  'return':
+    'prefix': '@return'
+    'body': '@return {${1:[type]}} ${2:[description]}'
+  'returns':
+    'prefix': '@returns'
+    'body': '@returns {${1:[type]}} ${2:[description]}'
+  'see':
+    'prefix': '@see'
+    'body': '@see ${1:[description]}'
+  'since':
+    'prefix': '@since'
+    'body': '@since ${1:[version]}'
+  'sumodule':
+    'prefix': '@sumodule'
+    'body': '@submodule ${1:[submodule]}'
+  'subpackage':
+    'prefix': '@subpackage'
+    'body': '@subpackage ${1:[name]}'
+  'this':
+    'prefix': '@this'
+    'body': '@this {${1:[type]}}'
+  'throws':
+    'prefix': '@throws'
+    'body': '@throws {${1:[exceptionType]}} If ${2:[this condition is met]}'
+  'todo':
+    'prefix': '@todo'
+    'body': '@todo ${1:[description]}'
+  'tutorial':
+    'prefix': '@tutorial'
+    'body': '@tutorial ${1:[link]}'
+  'type':
+    'prefix': '@type'
+    'body': '@type {${1:[type]}}'
+  'typedef':
+    'prefix': '@typedef'
+    'body': '@typedef {${1:[type]}}'
+  'uses':
+    'prefix': '@uses'
+    'body': '@uses ${1:[object]} ${2:[description]}'
+  'var':
+    'prefix': '@var'
+    'body': '@var {${1:[type]}} ${2:[description]}'
+  'version':
+    'prefix': '@version'
+    'body': '@version ${1:[version]}'

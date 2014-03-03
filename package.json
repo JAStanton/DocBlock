@@ -1,0 +1,25 @@
+{
+  "name": "doc-blockr",
+  "main": "./lib/doc-blockr",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A short description of your package",
+  "activationEvents": [
+    "doc-blockr:toggle"
+  ],
+  "repository": "https://github.com/atom/doc-blockr",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "devDependencies": {
+    "underscore-plus": "~1.0.4",
+
+    "fs-plus": "2.x",
+    "pathwatcher": "0.16.0",
+    "season": "1.x",
+    "underscore-plus": "1.x",
+    "async": "~0.2.6"
+
+  }
+}
