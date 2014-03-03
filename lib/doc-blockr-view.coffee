@@ -39,5 +39,5 @@ class DocBlockrView extends AutocompleteView
       @editor.insertText("@")
       return
 
-    # Todo: load the UI with "loading..." as a disabled seleciton.
+# Todo: load the UI with "loading..." as a disabled seleciton.
     if @loaded then @attach() else @attachWhenReady = true

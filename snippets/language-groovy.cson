@@ -1,4 +1,4 @@
-'source.groovy comment.block.documentation':
+'.source.groovy .comment.block':
   '@author':
     'prefix': '@author'
     'body': '@author ${1:[author]}'

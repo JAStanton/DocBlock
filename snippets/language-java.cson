@@ -1,4 +1,4 @@
-'source.java comment.block.documentation':
+'.source.java .comment.block':
   '@author':
     'prefix': '@author'
     'body': '@author ${1:[author]}'
