@@ -8,7 +8,7 @@ class DocBlockrView extends AutocompleteView
   languagesLoaded: false
   attachWhenReady: false
 
-  initialize: (@editor, @snippets) ->
+  initialize: (@editor, @snippets, @languagesLoaded) ->
     atom.packages.on "doc-blockr:loaded", => @onComplete()
     atom.workspaceView.command "doc-blockr:toggle", => @toggle()
     super(@editor)
@@ -54,6 +54,5 @@ class DocBlockrView extends AutocompleteView
     unless @isInsideCommentBlock() and @isAfterCommentCharacter()
       @editor.insertText("@")
       return
-
     # Todo: load the UI with "loading..." as a disabled seleciton.
     if @languagesLoaded then @attach() else @attachWhenReady = true

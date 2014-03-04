@@ -18,6 +18,7 @@ fs = require 'fs-plus'
 module.exports =
   autocompleteViews: []
   editorSubscription: null
+  languagesLoaded: false
   docBlockrView: null
   snippetsByPrefix: {}
   languageFileRegex: /language-\w+.cson/
@@ -31,7 +32,7 @@ module.exports =
 
     @editorSubscription = atom.workspaceView.eachEditorView (editor) =>
       if editor.attached and not editor.mini
-        autocompleteView = new DocBlockrView(editor, @snippetsByPrefix)
+        autocompleteView = new DocBlockrView(editor, @snippetsByPrefix, @languagesLoaded)
         editor.on 'editor:will-be-removed', =>
           autocompleteView.remove() unless autocompleteView.hasParent()
           _.remove(@autocompleteViews, autocompleteView)
@@ -78,6 +79,10 @@ module.exports =
     onComplete()
 
   doneLoading: ->
+    # I set this here for any new tabs that might open through my
+    # editorSubscription. And also I emit the event for any open editors that
+    # have already been initialized.
+    @languagesLoaded = true
     atom.packages.emit 'doc-blockr:loaded'
 
   deactivate: ->
