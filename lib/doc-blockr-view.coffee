@@ -5,7 +5,7 @@ AutocompleteView = require './autocomplete-view'
 
 module.exports =
 class DocBlockrView extends AutocompleteView
-  loaded: false
+  languagesLoaded: false
   attachWhenReady: false
 
   initialize: (@editor, @snippets) ->
@@ -14,8 +14,19 @@ class DocBlockrView extends AutocompleteView
     super(@editor)
 
   onComplete: ->
-    @loaded = true
+    @languagesLoaded = true
     @attach() if @attachWhenReady
+
+  getCommentRegex: ->
+    switch @getLanguage()
+      when "js","java","actionscript","groovy" then /\*/
+      when "coffee" then /[#\*]/
+
+  isAfterCommentCharacter: ->
+    cursor = @editor.getCursor()
+    startPoint = cursor.getBeginningOfCurrentWordBufferPosition(wordRegex: @getCommentRegex())
+    text = @editor.getTextInRange([startPoint, cursor.getBufferPosition()])
+    text?.replace(/\s/g, '').length is 1
 
   isInsideCommentBlock: ->
     scopes = @editor.getCursor().getScopes()
@@ -40,9 +51,9 @@ class DocBlockrView extends AutocompleteView
 
   toggle: ->
     return unless @editorView.isVisible()
-    unless @isInsideCommentBlock()
+    unless @isInsideCommentBlock() and @isAfterCommentCharacter()
       @editor.insertText("@")
       return
 
-# Todo: load the UI with "loading..." as a disabled seleciton.
-    if @loaded then @attach() else @attachWhenReady = true
+    # Todo: load the UI with "loading..." as a disabled seleciton.
+    if @languagesLoaded then @attach() else @attachWhenReady = true

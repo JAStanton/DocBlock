@@ -6,6 +6,15 @@ CSON = require 'season'
 {File} = require 'pathwatcher'
 fs = require 'fs-plus'
 
+###*
+ * My todo's:
+ * SPECS!
+ * Formating for blocks and all the behavior that comes with that.
+ * Triggers for `{` i.e. {@code blah}.
+ * Activate for newly opened tabs.
+ * Autocomplete box when typing insert that text into the DOM.
+ * Autocomplete box if no match found exit.
+###
 module.exports =
   autocompleteViews: []
   editorSubscription: null
