@@ -2,4 +2,4 @@
 DocBlock
 ========
 
-DocBlock for Atom
+DocBlock for Atom.
